@@ -6,9 +6,7 @@ Summary:        X Rendering Extension library
 Url:            http://cgit.freedesktop.org/xorg/lib/libXrender/
 Group:          Development/Libraries/C and C++
 
-#Git-Clone:	git://anongit.freedesktop.org/xorg/lib/libXrender
 Source:         %{name}-%{version}.tar.bz2
-#git#BuildRequires:	autoconf >= 2.60, automake, libtool
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(renderproto) >= 0.9
 BuildRequires:  pkgconfig(x11)
@@ -34,7 +32,7 @@ in %{name}.
 %setup -q
 
 %build
-%reconfigure --docdir=%_docdir/%{name} --disable-static
+%configure --docdir=%_docdir/%{name} --disable-static
 make %{?_smp_mflags}
 
 %install
