@@ -4,7 +4,7 @@ Release:        0
 License:        MIT
 Summary:        X Rendering Extension library
 Url:            http://cgit.freedesktop.org/xorg/lib/libXrender/
-Group:          Development/Libraries/C and C++
+Group:          Graphics/X Window System
 
 Source:         %{name}-%{version}.tar.bz2
 BuildRequires:  pkgconfig
@@ -18,7 +18,7 @@ the Render extension.
 
 %package devel
 Summary:        Development files for the X11 Render Extension library
-Group:          Development/Libraries/C and C++
+Group:          Development/Libraries
 Requires:       %{name} = %{version}
 
 %description devel
@@ -44,6 +44,7 @@ make %{?_smp_mflags}
 
 %files
 %defattr(-,root,root)
+%license COPYING
 %{_libdir}/libXrender.so.1*
 
 %files devel
