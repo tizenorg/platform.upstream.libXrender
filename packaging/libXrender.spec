@@ -7,6 +7,7 @@ Url:            http://cgit.freedesktop.org/xorg/lib/libXrender/
 Group:          Graphics/X Window System
 
 Source:         %{name}-%{version}.tar.bz2
+Source1001: 	libXrender.manifest
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(renderproto) >= 0.9
 BuildRequires:  pkgconfig(x11)
@@ -30,6 +31,7 @@ in %{name}.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure --docdir=%_docdir/%{name} --disable-static
@@ -43,11 +45,13 @@ make %{?_smp_mflags}
 %postun  -p /sbin/ldconfig
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYING
 %{_libdir}/libXrender.so.1*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_includedir}/X11/*
 %{_libdir}/libXrender.so
