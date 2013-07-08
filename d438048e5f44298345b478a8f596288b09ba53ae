@@ -1,0 +1,8 @@
+Change-Id: Id438048e5f44298345b478a8f596288b09ba53ae
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:40:23 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4792
+Project: platform/upstream/libXrender
+Branch: refs/heads/tizen
