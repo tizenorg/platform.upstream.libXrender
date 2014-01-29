@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:           libXrender
 Version:        0.9.7
 Release:        0
@@ -12,6 +14,10 @@ BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(renderproto) >= 0.9
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xorg-macros) >= 1.8
+
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 %description
 The Xrender library is designed as a lightweight library interface to
