@@ -1,7 +1,7 @@
 %bcond_with x
 
 Name:           libXrender
-Version:        0.9.7
+Version:        0.9.8
 Release:        0
 License:        MIT
 Summary:        X Rendering Extension library
@@ -40,7 +40,7 @@ in %{name}.
 cp %{SOURCE1001} .
 
 %build
-%configure --docdir=%_docdir/%{name} --disable-static
+%autogen --docdir=%_docdir/%{name} --disable-static
 make %{?_smp_mflags}
 
 %install
